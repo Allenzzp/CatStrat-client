@@ -33,7 +33,7 @@ export default function Strategy(props) {
     const [stateDescription, setStateDescription] = useState(description)
     // save strategy
     function save(name, description) {
-        Axios.put('http://localhost:8080/strategy/', {
+        Axios.put('/strategy/', {
             id,
             name,
             description
@@ -55,7 +55,7 @@ export default function Strategy(props) {
 
     // save strategy
     function deleteStrategy() {
-        Axios.delete(`http://localhost:8080/strategy/${id}/${userID}`)
+        Axios.delete(`/strategy/${id}/${userID}`)
             .then((response) => {
                 console.log('delete request', response);
                 setCreation(!creation)

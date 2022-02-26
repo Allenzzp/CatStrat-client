@@ -20,7 +20,7 @@ export default function Dashboard({ coins, setCoins, tab, setTab }) {
 
     if (userID) {
       console.log('userID', userID)
-      Axios.get(`http://localhost:8080/dashboard`, { params: { user_id: userID } })
+      Axios.get(`/dashboard`, { params: { user_id: userID } })
         .then((res) => {
           console.log('response', res.data)
           setData(res.data)

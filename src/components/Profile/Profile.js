@@ -52,7 +52,7 @@ const Profile = ({setCoins, coins, tab, setTab}) => {
    
     Promise.all([
       Axios.get(`/profile/${id}}`, {params: {id, userID}}),
-      Axios.get(`http://localhost:8080/dashboard`, { params: { user_id: id } }),
+      Axios.get(`/dashboard`, { params: { user_id: id } }),
       Axios.get("/strategies", {params: {id}}),
       Axios.get("/sellers", {params: {id, userID}}),
       Axios.get("/likers", {params: {id, userID}}),

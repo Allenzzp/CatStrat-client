@@ -23,7 +23,7 @@ export default function StrategyInfo({ loginUserID }) {
     Axios.get(`/strategy/${userID}`)
     if (userID) {
       console.log('userID', userID)
-      Axios.get(`http://localhost:8080/strategy/${userID}`)
+      Axios.get(`/strategy/${userID}`)
         .then((res) => {
           console.log('response', res.data)
           setData(res.data)
@@ -36,7 +36,7 @@ export default function StrategyInfo({ loginUserID }) {
 
   // create strategy
   function create(name, description) {
-    Axios.post('http://localhost:8080/strategy/', {
+    Axios.post('/strategy/', {
       userID,
       name,
       description

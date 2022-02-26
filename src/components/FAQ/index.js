@@ -9,7 +9,7 @@ export default function FAQ({ loginUserID }) {
     //     Axios.get(`/strategy/${userID}`)
     //     if (userID) {
     //         console.log('userID', userID)
-    //         Axios.get(`http://localhost:8080/strategy/${userID}`)
+    //         Axios.get(`/strategy/${userID}`)
     //             .then((res) => {
     //                 console.log('response', res.data)
     //                 setData(res.data)

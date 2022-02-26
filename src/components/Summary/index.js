@@ -32,7 +32,7 @@ export default function Summary({ data }) {
 
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/dashboard/top-stock`, { params: { user_id: userID } })
+    axios.get(`/dashboard/top-stock`, { params: { user_id: userID } })
       .then((res) => {
         console.log('stock response', res.data[0].stock_symbol)
         setStock(res.data[0].stock_symbol)

@@ -14,7 +14,7 @@ function Register() {
 
   const register = () => {
     console.log("clicked")
-    Axios.post('http://localhost:8080/register', {
+    Axios.post('/register', {
       email: registerEmail,
       username: registerUser, 
       password: registerPassword,

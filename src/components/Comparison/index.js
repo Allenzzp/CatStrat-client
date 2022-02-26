@@ -31,7 +31,7 @@ const Comparison = () => {
     if (userID == id) {
       setCompare(true)
 
-      Axios.get(`http://localhost:8080/dashboard`, { params: { user_id: userID } })
+      Axios.get(`/dashboard`, { params: { user_id: userID } })
         .then((all) => {
           setGraphData(all.data)
           console.log("all1", all.data)
@@ -41,8 +41,8 @@ const Comparison = () => {
       setCompare(false)
 
       Promise.all([
-        Axios.get(`http://localhost:8080/dashboard`, { params: { user_id: userID } }),
-        Axios.get(`http://localhost:8080/dashboard`, { params: { user_id: id } }),
+        Axios.get(`/dashboard`, { params: { user_id: userID } }),
+        Axios.get(`/dashboard`, { params: { user_id: id } }),
         Axios.get(`/username/${id}`, { params: { id } }),
       ]).then((all) => {
         console.log("all0", all[0].data)
