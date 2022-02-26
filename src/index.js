@@ -4,13 +4,6 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Axios from "axios";
-
-// if (process.env.REACT_APP_API_BASE_URL) {
-//   axios.defaults.baseURL = "https://catstrat-server.herokuapp.com/";
-// }
-
-Axios.defaults.baseURL = "https://catstrat-server.herokuapp.com/";
 
 ReactDOM.render(
   <React.StrictMode>
