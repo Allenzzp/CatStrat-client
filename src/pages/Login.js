@@ -17,7 +17,8 @@ const Login = () => {
     console.log("clicked on login button");
     Axios.post('/login', {
       username: loginUser, 
-      password: loginPassword
+      password: loginPassword,
+      withCredentials: true
     }).then((response) => {
       console.log("react login", response)
       if (response.data.message) {
