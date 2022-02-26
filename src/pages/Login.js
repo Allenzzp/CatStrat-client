@@ -15,7 +15,7 @@ const Login = () => {
 
   const login = () => {
     // console.log("clicked")
-    Axios.post('/login', {
+    Axios.post('https://catstrat-server.herokuapp.com/login', {
       username: loginUser, 
       password: loginPassword
     }).then((response) => {
@@ -50,7 +50,7 @@ const Login = () => {
     } 
 
     if (loginStatus) {
-      navigate("/dashboard")
+      navigate("https://catstrat-server.herokuapp.com/dashboard")
     }
 
   }, [loginStatus]);
