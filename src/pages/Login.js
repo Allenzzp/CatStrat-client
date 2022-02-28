@@ -14,23 +14,23 @@ const Login = () => {
   Axios.defaults.withCredentials = true;
 
   const login = () => {
-    console.log("clicked on login button");
     Axios.post('/login', {
       username: loginUser, 
       password: loginPassword,
-    }).then((response) => {
-      console.log("react login", response)
-      if (response.data.message) {
-        setLoginStatus(false);
-        console.log(response.data.message);
-      } else {
-        setLoginStatus(true);
-        localStorage.setItem('token', response.data.token);
-        localStorage.setItem('userID', response.data.userID);
-        localStorage.setItem('username', response.data.username);
-      }
     })
-    .catch(err => console.log("here!", err.message));
+      .then((response) => {
+        console.log("react login", response)
+        if (response.data.message) {
+          setLoginStatus(false);
+          console.log(response.data.message);
+        } else {
+          setLoginStatus(true);
+          localStorage.setItem('token', response.data.token);
+          localStorage.setItem('userID', response.data.userID);
+          localStorage.setItem('username', response.data.username);
+        }
+      })
+      .catch(err => console.log("here!", err.message));
   }
 
   // const getUserID = () => {
