@@ -19,7 +19,7 @@ const Login = () => {
       password: loginPassword,
     })
       .then((response) => {
-        console.log("react login", response)
+        console.log("react login", response.data)
         if (response.data.message) {
           setLoginStatus(false);
           console.log(response.data.message);
