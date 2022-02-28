@@ -18,7 +18,6 @@ const Login = () => {
     Axios.post('/login', {
       username: loginUser, 
       password: loginPassword,
-      withCredentials: true
     }).then((response) => {
       console.log("react login", response)
       if (response.data.message) {
@@ -31,7 +30,7 @@ const Login = () => {
         localStorage.setItem('username', response.data.username);
       }
     })
-    .catch(err => console.log(err.message));
+    .catch(err => console.log("here!", err.message));
   }
 
   // const getUserID = () => {
