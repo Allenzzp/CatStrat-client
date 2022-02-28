@@ -31,6 +31,7 @@ const Login = () => {
         localStorage.setItem('username', response.data.username);
       }
     })
+    .catch(err => console.log(err.message));
   }
 
   // const getUserID = () => {
